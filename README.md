@@ -21,3 +21,12 @@
 - 생성자 자동 주입 : @Component 스캔을 하고, Bean을 등록하기 위해 생성자를 호출한다 ->  @Autowired 발견 -> 스프링 컨테이너에서 주입할 Bean을 꺼내서 주입해줌
   - 생성자 호출하면서 딱 한번만 실행 -> 불변, 필수 
 
+### 생성자 주입을 선택하는 이유
+1) 의존관계는 사실 프로그램 종료까지 불변하는 경우가 많음
+2) 누락을 막을 수 있음
+3) final 키워드 사용할 수 있음 
+
+
+### @RequiredArgsConstructor
+@RequiredArgsConstructor = 생성자 @Autowired 
+- final이 붙은 필드들을 모아서 생성자를 자동으로 만들어주는 lombok의 기능 중 하나 
